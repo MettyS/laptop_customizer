@@ -1,10 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Cart.css'
 import CartSummary from '../CartSummary/CartSummary'
 import TotalSummary from '../TotalSummary/TotalSummary'
 
-class Cart extends Component {
-
+function Cart (props) {
+  
+  return (
+    <section className="main__summary">
+            <h2>Your cart</h2>
+            <CartSummary selected={props.selected}/>
+            <TotalSummary selected={props.selected}/>
+            
+          </section>
+  )
 }
 
 export default Cart

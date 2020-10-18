@@ -1,8 +1,27 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './CartSummary.css'
 import OptionSummary from '../OptionSummary/OptionSummary'
 
-class CartSummary extends Component {
+function CartSummary (props) {
+
+  const summary = Object.keys(props.selected).map((feature, idx) => {
+    const featureHash = feature + '-' + idx;
+    const selectedOption = props.selected[feature];
+
+    return (
+      <OptionSummary 
+        featureName={feature} 
+        featureHash={featureHash}
+        selectedOption={selectedOption}
+      />
+    );
+  });
+
+  return (
+    <>
+    {summary}
+    </>
+  )
 
 }
 

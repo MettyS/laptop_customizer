@@ -1,9 +1,21 @@
-import React, { Component } from 'react';
-import './OptionSummary.css'
+import React from 'react';
 
 
-class OptionSummary extends Component {
+function OptionSummary (props) {
+  const USCurrencyFormat = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD'
+  });
 
+  return (
+    <div className="summary__option" key={props.featureHash}>
+      <div className="summary__option__label">{props.featureName} </div>
+      <div className="summary__option__value">{props.selectedOption.name}</div>
+      <div className="summary__option__cost">
+        {USCurrencyFormat.format(props.selectedOption.cost)}
+      </div>
+    </div>
+  );
 }
 
 export default OptionSummary
