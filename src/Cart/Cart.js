@@ -1,5 +1,4 @@
 import React from 'react';
-import './Cart.css'
 import CartSummary from '../CartSummary/CartSummary'
 import TotalSummary from '../TotalSummary/TotalSummary'
 

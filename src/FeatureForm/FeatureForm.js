@@ -14,6 +14,8 @@ class FeatureForm extends Component {
   render() { 
     const formFeatures = Object.keys(this.props.features).map((feature, idx) => {
       const featureHash = feature + '-' + idx;
+      console.log(feature);
+      console.log('selected is', this.props.selected[feature]);
       
   
       return (
@@ -22,6 +24,7 @@ class FeatureForm extends Component {
         feature={this.props.features[feature]} 
         featureHash={featureHash}
         updateFeature={(feature, item) => {this.props.updateFeature(feature, item)}}
+        selectedName={this.props.selected[feature].name}
         />
       );
     });

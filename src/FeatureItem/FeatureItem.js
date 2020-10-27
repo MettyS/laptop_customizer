@@ -13,14 +13,16 @@ function FeatureItem (props){
 
     return (
 
-      <div key={itemHash} className="feature__item">
+      <div key={itemHash} className={"feature__item" + (item.name === props.selectedName ? ' selected' : '')}>
         <input
           type="radio"
           id={itemHash}
-          className="feature__option"
+          className='feature__option'
           name={slugify(props.featureName)}
           checked={item.name === props.selectedName}
-          onChange={e => props.updateFeature(props.featureName, item)}
+          onChange={e => {
+            props.updateFeature(props.featureName, item);
+          }}
         />
         <label htmlFor={itemHash} className="feature__label">
           {item.name} ({USCurrencyFormat.format(item.cost)})

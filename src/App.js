@@ -52,8 +52,9 @@ class App extends Component {
 
           <FeatureForm 
           features={this.props.features} 
-          updateFeature={(feature, item) => {this.updateFeature(feature, item)}
-          }/>
+          updateFeature={(feature, item) => {this.updateFeature(feature, item)}}
+          selected = {this.state.selected}
+          />
           
           <Cart 
           selected = {this.state.selected}

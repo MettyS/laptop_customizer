@@ -30,6 +30,11 @@ legend > h3 {
   margin: 0;
 }
 
+.selected {
+  background-color: aquamarine;
+  
+}
+
 main {
   width: 95%;
   max-width: 120rem;

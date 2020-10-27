@@ -1,5 +1,4 @@
 import React from 'react';
-import './CartSummary.css'
 import OptionSummary from '../OptionSummary/OptionSummary'
 
 function CartSummary (props) {
